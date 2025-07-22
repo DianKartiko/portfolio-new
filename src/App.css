@@ -1,0 +1,28 @@
+/* Fonts Inter */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/* Tailwindcss */
+@import "tailwindcss";
+/* Flowbite */
+@source "../node_modules/flowbite";
+@plugin "flowbite/plugin";
+
+@theme {
+    /* Custom Color */
+    --color-black-haze-50: #f7f7f7;
+
+    /* Color White */
+    --color-white-50: #ffffff;
+    --color-white-100: #efefef;
+    --color-white-200: #dcdcdc;
+    --color-white-300: #bdbdbd;
+    --color-white-400: #989898;
+    --color-white-500: #7c7c7c;
+    --color-white-600: #656565;
+    --color-white-700: #525252;
+    --color-white-800: #464646;
+    --color-white-900: #3d3d3d;
+    --color-white-950: #292929;
+
+    /* Fonts */
+    --font-inter: "Inter", sans-serif;
+}
