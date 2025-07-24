@@ -5,6 +5,7 @@
 /* Flowbite */
 @source "../node_modules/flowbite";
 @plugin "flowbite/plugin";
+@plugin 'tailwind-scrollbar';
 
 @theme {
     /* Custom Color */

@@ -1,17 +1,21 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./assets/pages/HomePage";
 import NavBar from "./assets/components/NavBar/NavBar";
+import PageNotFound from "./assets/pages/404NotFound";
 
 function App() {
     return (
-        <>
-            <div className="bg-[var(--color-black-haze-50)] font-(font-family: --font-inter)">
+        <Router>
+            <NavBar />
+            <Routes>
                 {/* Contents */}
-                <NavBar />
-                <Home />
+
+                <Route path="/" element={<Home />} />
+                <Route path="*" element={<PageNotFound />} />
                 {/* Contents */}
-            </div>
-        </>
+            </Routes>
+        </Router>
     );
 }
 
