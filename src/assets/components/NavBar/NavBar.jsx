@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ProfileImage from "../../images/profile.png";
 
-// SideBar With FlowBite
 function Navbar() {
+    const location = useLocation();
+
     const NavLinks = [
         {
             id: 1,
@@ -12,9 +13,9 @@ function Navbar() {
             svgPath: (
                 <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
                     d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"
                 />
             ),
@@ -26,7 +27,7 @@ function Navbar() {
             svgPath: (
                 <path
                     stroke="currentColor"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
                 />
             ),
@@ -38,9 +39,9 @@ function Navbar() {
             svgPath: (
                 <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
                     d="M8 7H5a2 2 0 0 0-2 2v4m5-6h8M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m0 0h3a2 2 0 0 1 2 2v4m0 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6m18 0s-4 2-9 2-9-2-9-2m9-2h.01"
                 />
             ),
@@ -52,9 +53,9 @@ function Navbar() {
             svgPath: (
                 <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
                     d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"
                 />
             ),
@@ -66,8 +67,8 @@ function Navbar() {
             svgPath: (
                 <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-width="1.5"
+                    strokeLinecap="round"
+                    strokeWidth="1.5"
                     d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
                 />
             ),
@@ -82,7 +83,7 @@ function Navbar() {
             svgPath: (
                 <path
                     fill="currentColor"
-                    d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
+                    d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Z"
                 />
             ),
         },
@@ -142,44 +143,20 @@ function Navbar() {
 
     return (
         <>
-            <button
-                data-drawer-target="default-sidebar"
-                data-drawer-toggle="default-sidebar"
-                aria-controls="default-sidebar"
-                type="button"
-                className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            >
-                <span className="sr-only">Open sidebar</span>
-                <svg
-                    className="w-6 h-6"
-                    aria-hidden="true"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        clip-rule="evenodd"
-                        fill-rule="evenodd"
-                        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-                    ></path>
-                </svg>
-            </button>
-
             <aside
-                id="default-sidebar"
                 className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
                 aria-label="Sidebar"
             >
                 <div className="h-full px-3 py-4 overflow-y-auto bg-white dark:bg-gray-800 flex flex-col justify-evenly rounded-2xl">
-                    {/* Link Navigation */}
-                    <ul className="space-x-4 flex items-center">
+                    {/* Profile */}
+                    <ul className="space-x-4 flex items-center mb-4">
                         <img
-                            class="w-12 h-12 rounded-full"
+                            className="w-12 h-12 rounded-full"
                             src={ImageProfile.path}
                             alt={ImageProfile.alt}
-                        ></img>
-                        <div className="flex flex-col ">
-                            <span className="text-lg font-semibold text-black">
+                        />
+                        <div className="flex flex-col">
+                            <span className="text-lg font-semibold text-black dark:text-white">
                                 {ImageProfile.name}
                             </span>
                             <span className="text-sm font-regular text-gray-500">
@@ -187,19 +164,29 @@ function Navbar() {
                             </span>
                         </div>
                     </ul>
+
+                    {/* Navigation */}
                     <ul className="space-y-2 font-medium">
                         {NavLinks.map((link) => (
                             <li key={link.id}>
                                 <Link
                                     to={link.path}
-                                    className="flex items-center p-2 text-gray-500 rounded-lg font-normal dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group hover:text-gray-900 transition-all"
+                                    className={`flex items-center p-2 rounded-lg font-medium transition-all group ${
+                                        location.pathname === link.path
+                                            ? "text-gray-900 bg-gray-100"
+                                            : "text-gray-500 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-gray-900"
+                                    }`}
                                 >
                                     <svg
-                                        className="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                        className={`w-6 h-6 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white ${
+                                            location.pathname === link.path
+                                                ? "text-gray-900"
+                                                : "text-gray-500 dark:text-gray-400"
+                                        }`}
                                         aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
-                                        viewBox={link.viewbox}
+                                        viewBox="0 0 24 24"
                                     >
                                         {link.svgPath}
                                     </svg>
@@ -209,12 +196,12 @@ function Navbar() {
                         ))}
                     </ul>
 
-                    {/* Link Social Media*/}
-                    <ul className="space-y-2 font-medium">
-                        {SocialMedia.map((SocialLink) => (
-                            <li key={SocialLink.id}>
+                    {/* Social Media */}
+                    <ul className="space-y-2 font-medium mt-6">
+                        {SocialMedia.map((item) => (
+                            <li key={item.id}>
                                 <a
-                                    href={SocialLink.link}
+                                    href={item.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center p-2 text-gray-500 rounded-lg font-normal dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group hover:text-gray-900 transition-all"
@@ -226,11 +213,9 @@ function Navbar() {
                                         fill="none"
                                         viewBox="0 0 24 24"
                                     >
-                                        {SocialLink.svgPath}
+                                        {item.svgPath}
                                     </svg>
-                                    <span className="ms-3">
-                                        {SocialLink.label}
-                                    </span>
+                                    <span className="ms-3">{item.label}</span>
                                 </a>
                             </li>
                         ))}
